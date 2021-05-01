@@ -11,7 +11,7 @@ function Home() {
   return (
     <div className={classes.test}>
       <h1>YoTixx</h1>
-      <h1>Testing the automatic deploy</h1>
+      <h1>Testing the automatic deploy again</h1>
     </div>
   );
 }
