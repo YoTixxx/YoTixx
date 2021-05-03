@@ -3,6 +3,7 @@ import YoTixxHeader from "../../ReusableComponents/YoTixxHeader/YoHeader";
 import Form from "../../ReusableComponents/Forms/Form";
 import SignInButton from "../../ReusableComponents/SignButton/SignButton";
 import "../SignIn/SignIn.scss";
+import {useAuth} from "../../contexts/AuthContext"
 
 const SignUp = () => {
   const emailRef = useRef
@@ -11,7 +12,13 @@ const SignUp = () => {
   const lastNameRef = useRef
   const cityRef = useRef
   const postalRef = useRef
+const {signup} = useAuth
 
+function handleSubmit (e){ 
+  e.preventDefault()
+
+  signup(emailRef.current.value, passwordRef.current.value)
+}
 
   return (
     <div>
