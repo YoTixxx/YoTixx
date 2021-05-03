@@ -1,0 +1,21 @@
+.header-image {
+  height: 98px;
+  width: 376px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-image {
+    height: 80px;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .header-image {
+    height: 70px;
+    width: 250px;
+  }
+}
