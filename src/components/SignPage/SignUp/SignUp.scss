@@ -1,0 +1,22 @@
+.sign-form-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-form {
+  width: 29%;
+}
+
+.right-form {
+  margin-left: 2%;
+  width: 29%;
+}
+
+@media only screen and (max-width: 600px) {
+  .left-form {
+    width: 32.3%;
+  }
+  .right-form {
+    width: 32.3%;
+  }
+}
