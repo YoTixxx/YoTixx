@@ -24,6 +24,7 @@ const Form = (props) => {
           type={props.type}
           defaultValue={props.value}
           variant="filled"
+          ref={props.ref}
         />
       </div>
     </form>
