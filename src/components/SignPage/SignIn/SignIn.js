@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import YoTixxHeader from "../../ReusableComponents/YoTixxHeader/YoHeader";
 // import "./SignUp.scss";
 import { Form, Button, Card, Alert } from "react-bootstrap";
@@ -8,9 +8,10 @@ import { useAuth } from "../../../contexts/AuthContext";
 export default function SignIn() {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { signup } = useAuth();
+  const { login } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const history = useHistory()
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -18,9 +19,10 @@ export default function SignIn() {
     try {
       setError("");
       setLoading(true);
-      await signup(emailRef.current.value, passwordRef.current.value);
+      await login(emailRef.current.value, passwordRef.current.value);
+    history.push("/")
     } catch {
-      setError("Failed to create an account");
+      setError("Failed to sign In");
     }
 
     setLoading(false);
@@ -62,7 +64,7 @@ export default function SignIn() {
         <div className="text-content">
           New to YoTixx? Creat an Account?
           <Link to="/signup" className="text-content sign-in-link">
-            Sign In
+            Sign Up
           </Link>
         </div>
       </div>
