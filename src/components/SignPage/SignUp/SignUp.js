@@ -70,7 +70,7 @@ export default function Signup() {
       <div>
         <div className="text-content">
           Already have a YoTixx Account?
-          <Link to="/" className="text-content sign-in-link">
+          <Link to="/login" className="text-content sign-in-link">
             Sign In
           </Link>
         </div>
