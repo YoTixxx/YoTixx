@@ -34,7 +34,8 @@ function Home() {
       <h2>Profile</h2>
 {error && <Alert variant="danger">{error}</Alert>}
 <strong>Email:</strong>{currentUser.email}
-<button onClick={handleLogout}>Logout</button>
+<Button onClick={()=>history.push("/update-profile")}>Update Profile</Button>
+<Button onClick={handleLogout}>Logout</Button>
 
     </div>
   );
