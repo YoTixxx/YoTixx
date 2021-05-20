@@ -2,6 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import  {useState} from "react"
 import {useAuth} from "../../contexts/AuthContext";
 import {Link, useHistory} from "react-router-dom"
+import { Form, Button, Card, Alert } from "react-bootstrap";
 
 const useStyles = makeStyles((theme) => ({
   test: {
@@ -30,7 +31,11 @@ function Home() {
     <div className={classes.test}>
       <h1>YoTixx</h1>
       <h1>Testing the automatic deploy again</h1>
+      <h2>Profile</h2>
+{error && <Alert variant="danger">{error}</Alert>}
+<strong>Email:</strong>{currentUser.email}
 <button onClick={handleLogout}>Logout</button>
+
     </div>
   );
 }
