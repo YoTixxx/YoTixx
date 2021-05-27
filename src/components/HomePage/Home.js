@@ -18,7 +18,6 @@ function Home() {
 
   async function handleLogout(){
     setError('')
-
     try{
       await logout()
       history.push("/login")
