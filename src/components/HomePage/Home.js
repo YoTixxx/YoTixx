@@ -30,7 +30,7 @@ function Home() {
   return (
     <>
       <HomeHeader />
-      <div className={classes.test}>
+      {/* <div className={classes.test}>
         <h1>YoTixx</h1>
         <h1>Testing the automatic deploy again</h1>
         <h2>Profile</h2>
@@ -41,7 +41,7 @@ function Home() {
           Update Profile
         </Button>
         <Button onClick={handleLogout}>Logout</Button>
-      </div>
+      </div> */}
     </>
   );
 }
