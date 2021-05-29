@@ -7,18 +7,10 @@ function FetchData() {
   const fetchAPI = (key) => {
     const API_KEY = process.env.REACT_APP_TICKETMASTER_API_KEY;
     let url = `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=324&apikey=${API_KEY}&size=10`;
-    // let url = "https://api.randomuser.me/";
 
     return fetch(url)
       .then((res) => res.json())
-      .then((data) => {
-        data._embedded.events.map((event) => {
-          let eventObj = {
-            title: event.name,
-          };
-          setInformation((information) => [...information, eventObj]);
-        });
-      });
+      .then(data);
   };
 
   const { data, error, isLoading, isError } = useQuery(
@@ -38,21 +30,14 @@ function FetchData() {
     <div>
       <h1>Concerts</h1>
 
-      {/* {information.map((event, index) => {
-        <div>
-          <p>{event.title}</p>
-        </div>;
-      })} */}
+      {data._embedded.events.map((event) => (
+        <div key={event.id}>
+          <h2>This is the event name: {event.name}</h2>
+          {console.log(event.images[0].url)}
+        </div>
+      ))}
 
-      {/* {JSON.stringify({information})} */}
-
-      {/* <pre>{JSON.stringify(information, null, 2)}</pre> */}
-      {/* 
-      {information.map((info, index) => {
-        <div key={index}>
-          <div>{info.name}</div>
-        </div>;
-      })} */}
+      {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
     </div>
   );
 }
