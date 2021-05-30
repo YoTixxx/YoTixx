@@ -5,9 +5,9 @@ import { useQuery } from "react-query";
 const useStyles = makeStyles({
   container: {
     position: "relative",
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
+  },
+  header: {
+    marginTop: "200px",
   },
   image: {
     height: "225px",
@@ -48,7 +48,7 @@ function Concerts() {
 
   return (
     <div>
-      <h1>Concerts</h1>
+      <h1 className={classes.header}>Concerts</h1>
 
       {data._embedded.events.map((concertEvent) => (
         <div className={classes.container} key={concertEvent.id}>
