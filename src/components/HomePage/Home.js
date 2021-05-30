@@ -4,11 +4,16 @@ import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 
-import FetchData from "../../api/fetch";
+import Concerts from "../../api/Concerts";
+import Sports from "../../api/Sports";
+import Arts from "../../api/Arts";
 
 const useStyles = makeStyles((theme) => ({
   test: {
     backgroundColor: "blue",
+  },
+  testing: {
+    flexDirection: "row",
   },
 }));
 
@@ -43,7 +48,9 @@ function Home() {
         </Button>
         <Button onClick={handleLogout}>Logout</Button>
       </div>
-      <FetchData />
+      <Concerts />
+      <Sports />
+      <Arts />
     </div>
   );
 }
