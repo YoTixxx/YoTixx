@@ -5,6 +5,9 @@ import { useQuery } from "react-query";
 const useStyles = makeStyles({
   container: {
     position: "relative",
+    width: "100%",
+    display: "block",
+    marginBottom: "2rem",
   },
   header: {
     marginTop: "200px",
@@ -18,6 +21,11 @@ const useStyles = makeStyles({
     bottom: "1rem",
     margin: "0 1rem",
     color: "white",
+  },
+  row: {
+    display: "grid",
+    gridTemplateColumns: "repeat(3, minmax(100px, 1fr))",
+    columnGap: "2rem",
   },
 });
 
@@ -49,18 +57,19 @@ function Concerts() {
   return (
     <div>
       <h1 className={classes.header}>Concerts</h1>
+      <div className={classes.row}>
+        {data._embedded.events.map((concertEvent) => (
+          <div className={classes.container} key={concertEvent.id}>
+            <figure>
+              <img className={classes.image} src={concertEvent.images[2].url} />
 
-      {data._embedded.events.map((concertEvent) => (
-        <div className={classes.container} key={concertEvent.id}>
-          <figure>
-            <img className={classes.image} src={concertEvent.images[2].url} />
-
-            <figcaption className={classes.text}>
-              {concertEvent.name}
-            </figcaption>
-          </figure>
-        </div>
-      ))}
+              <figcaption className={classes.text}>
+                {concertEvent.name}
+              </figcaption>
+            </figure>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

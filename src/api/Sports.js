@@ -5,9 +5,9 @@ import { useQuery } from "react-query";
 const useStyles = makeStyles({
   container: {
     position: "relative",
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
+    width: "100%",
+    display: "block",
+    marginBottom: "2rem",
   },
   image: {
     height: "225px",
@@ -18,6 +18,11 @@ const useStyles = makeStyles({
     bottom: "1rem",
     margin: "0 1rem",
     color: "white",
+  },
+  row: {
+    display: "grid",
+    gridTemplateColumns: "repeat(3, minmax(100px, 1fr))",
+    columnGap: "2rem",
   },
 });
 
@@ -49,16 +54,19 @@ function Sports() {
   return (
     <div>
       <h1>Sports</h1>
+      <div className={classes.row}>
+        {data._embedded.events.map((sportEvent) => (
+          <div className={classes.container} key={sportEvent.id}>
+            <figure>
+              <img className={classes.image} src={sportEvent.images[2].url} />
 
-      {data._embedded.events.map((sportEvent) => (
-        <div className={classes.container} key={sportEvent.id}>
-          <figure>
-            <img className={classes.image} src={sportEvent.images[2].url} />
-
-            <figcaption className={classes.text}>{sportEvent.name}</figcaption>
-          </figure>
-        </div>
-      ))}
+              <figcaption className={classes.text}>
+                {sportEvent.name}
+              </figcaption>
+            </figure>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
