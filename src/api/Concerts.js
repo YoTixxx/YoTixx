@@ -10,11 +10,13 @@ const useStyles = makeStyles({
     marginBottom: "2rem",
   },
   header: {
-    marginTop: "200px",
+    marginTop: "150px",
+    marginLeft: "5%",
   },
   image: {
     height: "225px",
     width: "400px",
+    cursor: "pointer",
   },
   text: {
     position: "absolute",
@@ -25,7 +27,7 @@ const useStyles = makeStyles({
   row: {
     display: "grid",
     gridTemplateColumns: "repeat(3, minmax(100px, 1fr))",
-    columnGap: "2rem",
+    marginLeft: "5%",
   },
 });
 
@@ -56,7 +58,7 @@ function Concerts() {
 
   return (
     <div>
-      <h1 className={classes.header}>Concerts</h1>
+      <h2 className={classes.header}>Concerts</h2>
       <div className={classes.row}>
         {data._embedded.events.map((concertEvent) => (
           <div className={classes.container} key={concertEvent.id}>

@@ -9,20 +9,25 @@ const useStyles = makeStyles({
     display: "block",
     marginBottom: "2rem",
   },
+  header: {
+    marginLeft: "5%",
+  },
   image: {
     height: "225px",
     width: "400px",
+    cursor: "pointer",
   },
   text: {
     position: "absolute",
     bottom: "1rem",
     margin: "0 1rem",
     color: "white",
+    width: "80%",
   },
   row: {
     display: "grid",
     gridTemplateColumns: "repeat(3, minmax(100px, 1fr))",
-    columnGap: "2rem",
+    marginLeft: "5%",
   },
 });
 
@@ -53,7 +58,7 @@ function Sports() {
 
   return (
     <div>
-      <h1>Sports</h1>
+      <h2 className={classes.header}>Sports</h2>
       <div className={classes.row}>
         {data._embedded.events.map((sportEvent) => (
           <div className={classes.container} key={sportEvent.id}>

@@ -9,9 +9,13 @@ const useStyles = makeStyles({
     display: "block",
     marginBottom: "2rem",
   },
+  header: {
+    marginLeft: "5%",
+  },
   image: {
     height: "225px",
     width: "400px",
+    cursor: "pointer",
   },
   text: {
     position: "absolute",
@@ -22,7 +26,7 @@ const useStyles = makeStyles({
   row: {
     display: "grid",
     gridTemplateColumns: "repeat(3, minmax(100px, 1fr))",
-    columnGap: "2rem",
+    marginLeft: "5%",
   },
 });
 
@@ -50,7 +54,7 @@ function Arts() {
 
   return (
     <div>
-      <h1>Arts</h1>
+      <h2 className={classes.header}>Arts</h2>
       <div className={classes.row}>
         {data._embedded.events.map((artEvent) => (
           <div className={classes.container} key={artEvent.id}>
