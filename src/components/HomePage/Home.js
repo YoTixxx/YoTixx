@@ -5,6 +5,10 @@ import { Link, useHistory } from "react-router-dom";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import HomeHeader from "../ReusableComponents/HomeHeader/Index";
 
+import Concerts from "../../api/Concerts";
+import Sports from "../../api/Sports";
+import Arts from "../../api/Arts";
+
 const useStyles = makeStyles((theme) => ({
   test: {
     backgroundColor: "blue",
@@ -30,6 +34,9 @@ function Home() {
   return (
     <>
       <HomeHeader />
+      <Concerts />
+      <Sports />
+      <Arts />
       {/* <div className={classes.test}>
         <h1>YoTixx</h1>
         <h1>Testing the automatic deploy again</h1>
@@ -41,6 +48,8 @@ function Home() {
           Update Profile
         </Button>
         <Button onClick={handleLogout}>Logout</Button>
+      </div>
+    </div>
       </div> */}
     </>
   );
