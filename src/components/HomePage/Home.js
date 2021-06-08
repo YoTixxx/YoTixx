@@ -4,6 +4,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import HomeHeader from "../ReusableComponents/HomeHeader/Index";
+import ImageSlider from "./slideshow/ImageSlider";
 
 const useStyles = makeStyles((theme) => ({
   test: {
@@ -30,6 +31,7 @@ function Home() {
   return (
     <>
       <HomeHeader />
+      <ImageSlider />
       {/* <div className={classes.test}>
         <h1>YoTixx</h1>
         <h1>Testing the automatic deploy again</h1>
