@@ -35,6 +35,7 @@ function Home() {
   return (
     <>
       <HomeHeader />
+      <ImageSlider />
       <Concerts />
       <Sports />
       <Arts />

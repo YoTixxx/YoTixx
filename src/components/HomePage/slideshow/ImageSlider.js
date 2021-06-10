@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 import { makeStyles } from "@material-ui/core/styles";
 import { useQuery } from "react-query";
 
@@ -11,48 +13,28 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   image: {
-    width: "1000px",
-    height: "600px",
+    width: "600px",
+    height: "300px",
     borderRadius: "10px",
-  },
-  slide: {
-    opacity: "0",
-    transitionDuration: "1s ease",
-  },
-  active: {
-    opacity: "1",
-    transitionDuration: "1s",
-    transform: "scale(1.08)",
   },
 });
 
 const ImageSlider = () => {
   const classes = useStyles();
-  const [current, setCurrent] = useState(0);
-  //   const length = ;
-  const delay = 2500;
-
-  useEffect(() => {
-    setTimeout(
-      () =>
-        setCurrent((prevIndex) =>
-          prevIndex === data._embedded.events.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
-    return () => {};
-  }, [current]);
 
   const fetchArtsAPI = (key) => {
     const API_KEY = process.env.REACT_APP_TICKETMASTER_API_KEY;
-    let artsURL = `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=sports&countryCode=US&apikey=${API_KEY}&size=6`;
+    let artsURL = `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=rap&dmaId=324&apikey=${API_KEY}&size=6`;
 
     return fetch(artsURL)
       .then((res) => res.json())
       .then(data);
   };
 
-  const { data, error, isLoading, isError } = useQuery("sports", fetchArtsAPI);
+  const { data, error, isLoading, isError } = useQuery(
+    "concerts",
+    fetchArtsAPI
+  );
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -63,24 +45,26 @@ const ImageSlider = () => {
   }
 
   return (
-    <section className={classes.slider}>
-      {data._embedded.events.map((artEvent, index) => {
-        return (
-          <div
-            key={index}
-            style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-          >
-            {index === current && (
+    <div className={classes.slider}>
+      <AliceCarousel
+        autoPlay
+        autoPlayInterval="2000"
+        infinite={true}
+        disableButtonsControls={true}
+      >
+        {data._embedded.events.map((concertsEvent, index) => {
+          return (
+            <div key={index}>
               <img
-                src={artEvent.images[2].url}
+                src={concertsEvent.images[2].url}
                 alt="Slideshow Images"
                 className={classes.image}
               />
-            )}
-          </div>
-        );
-      })}
-    </section>
+            </div>
+          );
+        })}
+      </AliceCarousel>
+    </div>
   );
 };
 
