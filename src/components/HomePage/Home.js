@@ -5,8 +5,6 @@ import { Link, useHistory } from "react-router-dom";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import HomeHeader from "../ReusableComponents/HomeHeader/Index";
 import ImageSlider from "./slideshow/ImageSlider";
-import SideBar from "../ReusableComponents/SidebarEvents/index";
-import Popular from "../ReusableComponents/PopularEvents/index";
 
 import Concerts from "../../api/Concerts";
 import Sports from "../../api/Sports";
@@ -38,17 +36,6 @@ function Home() {
     <>
       <HomeHeader />
       <ImageSlider />
-      {/* <SideBar
-        src="https://cdn.pixabay.com/photo/2017/01/08/13/58/cube-1963036__340.jpg"
-        title="Jonas Brothers"
-        description="See the global superstar trio on the Remember This Tour!"
-      /> */}
-      <Popular
-        src="https://cdn.pixabay.com/photo/2017/01/08/13/58/cube-1963036__340.jpg"
-        title="Toronto Blue Jays"
-        date="Sep 21 2021"
-        location="Rogers Arena"
-      />
       <Concerts />
       <Sports />
       <Arts />
