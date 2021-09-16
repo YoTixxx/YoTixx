@@ -1,0 +1,63 @@
+.popular-container {
+  width: 100%;
+  margin-left: 20px;
+  width: 368px;
+  height: 340px;
+  // background-color: grey;
+  //   transition: background-color 2s ease-out 100ms;
+  //   background: #ffb6c1;
+  //   transition: background-color 2s ease-out 100ms;
+
+  &__image {
+    clip: rect(0px, 560px, 100px, 0px);
+    cursor: pointer;
+    width: 368px;
+    height: 220px;
+  }
+
+  &__text-container {
+    align-self: flex-end;
+    width: 100px;
+    height: 100px;
+    background: #ffb6c1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    &__title {
+      font-family: SF Pro display;
+      font-size: 20px;
+      font-weight: bold;
+      //   color: white;
+    }
+
+    &__date {
+      font-family: SF Pro display;
+      font-size: 16px;
+      font-weight: bold;
+      //   color: white;
+    }
+
+    &__location {
+      font-family: SF Pro display;
+      font-size: 16px;
+      //   color: white;
+    }
+  }
+}
+
+.text-container:hover {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+@keyframes text-container {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
