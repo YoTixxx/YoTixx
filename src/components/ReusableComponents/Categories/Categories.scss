@@ -1,0 +1,30 @@
+.categories{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    margin-left: 5%;
+
+
+
+&__container{
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-bottom: 2rem;
+
+
+  &__image {
+    height: 225px;
+    width: 400px;
+    cursor: pointer;
+  }
+  &__text {
+    position: absolute;
+    font-size: 21px;
+    bottom: 1rem;
+    margin: 0 1rem;
+    color: black;
+    background: rgba(19, 34, 21, 0.3);
+}
+}
+  
+}
