@@ -1,0 +1,27 @@
+.main-container {
+  &__image {
+    width: 350px;
+    height: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  &__text-container {
+    display: inline-block;
+    vertical-align: top;
+
+    &__text-title {
+      font-family: SF Pro display;
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    &__description-text {
+      font-family: SF Pro display;
+      margin-left: 10px;
+      width: 50%;
+    }
+  }
+}
