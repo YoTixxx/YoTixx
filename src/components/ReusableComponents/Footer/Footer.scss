@@ -1,0 +1,22 @@
+    .footer {
+        flex-shrink: 0;
+        text-align: center;
+        background-color: rgb(66, 126, 205);
+        color: white;
+
+        &__bottom{
+            display: flex;
+            flex-direction: row;
+
+            &__images{
+                display: flex;
+                flex-direction: row;  
+            }
+        }
+
+      }
+
+      .footer-social-media{
+        width: 50px;    
+        height: 50px;
+      }
