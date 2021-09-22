@@ -11,6 +11,7 @@ import {
 import twitter from "../../../images/twitter2.png"
 import facebook from "../../../images/facebook3.png"
 import instagram from "../../../images/instagram2.png"
+import YoTixx from "../../../images/Yotix.png"
 
 
 const Footer = () =>{
@@ -22,23 +23,23 @@ const Footer = () =>{
         <Row>
           <Column>
             <Heading>About Us</Heading>
-            <FooterLink href="#">Aim</FooterLink>
-            <FooterLink href="#">Vision</FooterLink>
-            <FooterLink href="#">Testimonials</FooterLink>
+            <FooterLink href="#">Leeroy</FooterLink>
+            <FooterLink href="#">David</FooterLink>
+            <FooterLink href="#">YoTixx</FooterLink>
           </Column>
           <Column>
             <Heading>Services</Heading>
-            <FooterLink href="#">Writing</FooterLink>
-            <FooterLink href="#">Internships</FooterLink>
+            <FooterLink href="#">Tickets</FooterLink>
+            <FooterLink href="#">Projects</FooterLink>
             <FooterLink href="#">Coding</FooterLink>
-            <FooterLink href="#">Teaching</FooterLink>
+            <FooterLink href="#">Freelance</FooterLink>
           </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink href="#">Uttar Pradesh</FooterLink>
-            <FooterLink href="#">Ahemdabad</FooterLink>
-            <FooterLink href="#">Indore</FooterLink>
-            <FooterLink href="#">Mumbai</FooterLink>
+            <FooterLink href="#">GitHub</FooterLink>
+            <FooterLink href="#">@Leeroy</FooterLink>
+            <FooterLink href="#">@David</FooterLink>
+            <FooterLink href="#">@YoTixx</FooterLink>
           </Column>
           <Column>
             <Heading>Social Media</Heading>
@@ -77,7 +78,7 @@ const Footer = () =>{
         </div>
         <br/>
         <div className="footer__bottom">
-            <p>YoTixx</p>
+            <img src={YoTixx}/>
             <p>© 2021 YoTixx. All rights reserved.</p>
             <div className="footer__bottom__images">
                <img src={facebook} alt="social media logo" className="footer-social-media"/> 
