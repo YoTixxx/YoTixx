@@ -1,59 +1,58 @@
-.headline-events{
-    padding-top: 10vw;
-      padding-bottom: 85px;
-      margin-bottom: 8px;
-      padding-left: 2%;
-      width: 850px;
-   
+.headline-events {
+  padding-top: 10vw;
+  padding-bottom: 85px;
+  margin-bottom: 8px;
+  padding-left: 2%;
+  width: 850px;
 
-    &__image{
+  &__image {
     width: 826px;
     height: 464px;
     border-radius: 4px;
     padding-bottom: 25px;
-    }
+  }
 
-    &__title{
-        font-family: SF Pro Display;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 21px;
-        line-height: 24px;
-        display: flex;
-        align-items:flex-start;
-        color: #1c1c1c;
-        margin-bottom: 14px;
-    }
-    &__bottom{
-    
+  &__title {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-start;
+    color: #1c1c1c;
+    margin-bottom: 14px;
+  }
+  &__bottom {
     display: flex;
     flex-direction: row;
 
-    &__description{
-        font-family: SF Pro Display;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 21px;
-        display: flex;
-        align-items: flex-start;
-        color: #1c1c1c;
-        margin-bottom: 24px;
+    &__description {
+      font-family: SF Pro Display;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      display: flex;
+      align-items: flex-start;
+      color: #1c1c1c;
+      margin-bottom: 24px;
+      width: 80%;
     }
 
-    &__button{
-        width: auto;
-    background-color: #4f4e90;
-    color: white;
-    font-weight: 600;
-    font-size: 18px;
-    border: 1px solid #4f4e90;
-    border-color: #4f4e90;
-    height: 30px;
-    border-radius: 8px;
-    outline: none;
-    margin-left: auto;
-    // margin-top: 20px;
+    &__button {
+      width: auto;
+      background-color: #4f4e90;
+      color: white;
+      font-weight: 600;
+      font-size: 18px;
+      border: 1px solid #4f4e90;
+      border-color: #4f4e90;
+      height: 30px;
+      border-radius: 8px;
+      outline: none;
+      margin-left: auto;
+      // margin-top: 20px;
     }
-}
+  }
 }
