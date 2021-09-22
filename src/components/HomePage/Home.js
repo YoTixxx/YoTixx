@@ -5,6 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import HomeHeader from "../ReusableComponents/HomeHeader/Index";
 import ImageSlider from "./slideshow/ImageSlider";
+import HomeHeadline from "../../components/HomePage/Headline/index";
 
 import Concerts from "../../api/Concerts";
 import Sports from "../../api/Sports";
@@ -35,7 +36,8 @@ function Home() {
   return (
     <>
       <HomeHeader />
-      <ImageSlider />
+      <HomeHeadline />
+      {/* <ImageSlider /> */}
       <Concerts />
       <Sports />
       <Arts />
