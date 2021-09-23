@@ -35,12 +35,12 @@ function Home() {
 
   return (
     <>
-      <HomeHeader />
+      {/* <HomeHeader /> */}
       <HomeHeadline />
       {/* <ImageSlider /> */}
-      <Concerts />
+      {/* <Concerts />
       <Sports />
-      <Arts />
+      <Arts /> */}
       {/* <div className={classes.test}>
         <h1>YoTixx</h1>
         <h1>Testing the automatic deploy again</h1>

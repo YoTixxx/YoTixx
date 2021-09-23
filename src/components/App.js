@@ -15,7 +15,7 @@ function App() {
     <>
       <Router>
         <AuthProvider>
-          <Navbar />
+          {/* <Navbar /> */}
           <Switch>
             <PrivateRoutes exact path="/" component={Home} />
             <PrivateRoutes path="/update-profile" component={UpdateProfile} />
