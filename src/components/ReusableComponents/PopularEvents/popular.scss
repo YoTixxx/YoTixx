@@ -1,0 +1,40 @@
+.popular-container {
+  width: 100%;
+  margin-left: 100px;
+  width: 368px;
+  height: 340px;
+
+  &__image {
+    cursor: pointer;
+    width: 368px;
+    height: 220px;
+    transform: skewx(-10deg);
+  }
+
+  &__text-container {
+    cursor: pointer;
+    &__title {
+      font-family: SF Pro display;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    &__date {
+      font-family: SF Pro display;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    &__location {
+      font-family: SF Pro display;
+      font-size: 16px;
+      margin-top: -20px;
+    }
+  }
+
+  &__text-container:hover {
+    transform: scale(1.08);
+    transition: 0.5s ease-in-out;
+  }
+}
