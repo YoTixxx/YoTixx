@@ -113,6 +113,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+      <div className="footer__end"></div>
     </section>
   );
 };

@@ -35,16 +35,16 @@ function Home() {
 
   return (
     <>
-      <HomeHeader />
-      <ImageSlider />
+      {/* <HomeHeader /> */}
+      {/* <ImageSlider /> */}
       {/* <SideBar
         src="https://cdn.pixabay.com/photo/2017/01/08/13/58/cube-1963036__340.jpg"
         title="Jonas Brothers"
         description="See the global superstar trio on the Remember This Tour!"
       /> */}
-      <Concerts />
+      {/* <Concerts />
       <Sports />
-      <Arts />
+      <Arts /> */}
       <Footer/>
       {/* <div className={classes.test}>
         <h1>YoTixx</h1>

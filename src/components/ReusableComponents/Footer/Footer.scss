@@ -1,49 +1,80 @@
-.main{
-    flex-shrink: 0;
-    text-align: center;
-    background-color: #527ca4;
-    color: white;
-    height: 90vh;   
+.main {
+  flex-shrink: 0;
+  text-align: center;
+  background-color: #527ca4;
+  color: white;
+  height: 75vh;
+  width: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    height: 10vh;
+  }
 }
-    .footer {
-    margin: 10px 40px 0 40px;
-        
+.footer {
+  margin: 10px 40px 0 40px;
+  @media only screen and (max-width: 1024px) {
+    margin: 10px 20px 0 20px;
+  }
 
-        &__top{
-            border-bottom: white 1px solid;
-            margin-top: 100px;
-            margin-bottom: 30px;
-        }
-        &__bottom{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 80px;
-           
-            &__terms{
+  &__top {
+    border-bottom: white 1px solid;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // margin-bottom: 80px;
 
-               &__agreement{
-                   text-decoration: underline;
-               }
-            }
-            &__logo{
-                width: 150px;
-                height: 40px;
-            }
-
-            &__images{
-                display: flex;
-                flex-direction: row; 
-                justify-content: space-between; 
-                margin-right: 50px; 
-            }
-        }
-
+    &__terms {
+      @media only screen and (max-width: 1024px) {
+        display: none;
       }
-
-      .footer-social-media{
-        width: 30px;    
-        height: 30px;
-        display: flex;
-       margin-right: 30px; 
+      &__agreement {
+        text-decoration: underline;
       }
+    }
+    &__logo {
+      width: 150px;
+      height: 40px;
+
+      @media only screen and (max-width: 1024px) {
+        width: 125px;
+        height: 25px;
+      }
+    }
+
+    &__images {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-right: 50px;
+      @media only screen and (max-width: 1024px) {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.footer__end {
+  background-color: rgba(230, 15, 15, 0.694);
+  height: 10vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.footer-social-media {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  margin-right: 30px;
+
+  @media only screen and (max-width: 1024px) {
+    margin-right: 5px;
+    justify-content: flex-end;
+  }
+}
