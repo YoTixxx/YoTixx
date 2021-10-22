@@ -45,7 +45,7 @@ function Arts() {
   const { data, error, isLoading, isError } = useQuery("arts", fetchArtsAPI);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p>Loading....</p>;
   }
 
   if (isError) {
