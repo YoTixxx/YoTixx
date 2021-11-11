@@ -15,6 +15,7 @@ import YoTixx from "../../../images/Yotix.png";
 
 const Footer = () => {
   return (
+     
     <section className="main">
       <footer className="footer">
         <div className="footer__top">
@@ -113,7 +114,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="footer__end"></div>
+      {/* <div className="footer__end"></div> */}
     </section>
   );
 };
