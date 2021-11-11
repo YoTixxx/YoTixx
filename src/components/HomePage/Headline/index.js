@@ -15,9 +15,9 @@ const HomeHeadline = () => {
       .then((data) => {
         setEventImage(data._embedded.events[0].images[3].url);
         setEventTitle(data._embedded.events[0].name);
-        setEventDescription(
-          data._embedded.events[0].ticketing.healthCheck.description
-        );
+        // setEventDescription(
+        //   data._embedded.events[0].ticketing.healthCheck.description
+        // );
       });
   }, []);
 
