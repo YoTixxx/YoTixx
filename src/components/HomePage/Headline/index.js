@@ -7,7 +7,9 @@ const HomeHeadline = () => {
 
   let [eventImage, setEventImage] = useState(null);
   let [eventTitle, setEventTitle] = useState(null);
-  let [eventDescription, setEventDescription] = useState(null);
+  let [eventLocation, setEventLocation] = useState(null);
+  let [eventCity, setEventCity] = useState(null);
+  let [eventState, setEventState] = useState(null);
 
   useEffect(() => {
     fetch(sportsURL)
@@ -15,9 +17,9 @@ const HomeHeadline = () => {
       .then((data) => {
         setEventImage(data._embedded.events[0].images[3].url);
         setEventTitle(data._embedded.events[0].name);
-        // setEventDescription(
-        //   data._embedded.events[0].ticketing.healthCheck.description
-        // );
+        setEventLocation(data._embedded.events[0]._embedded.venues[0].name);
+        setEventCity(data._embedded.events[0]._embedded.venues[0].city.name);
+        setEventState(data._embedded.events[0]._embedded.venues[0].state.name);
       });
   }, []);
 
@@ -26,7 +28,9 @@ const HomeHeadline = () => {
       <HeadlineEvents
         image={eventImage}
         title={eventTitle}
-        description={eventDescription}
+        location={eventLocation}
+        city={eventCity}
+        state={eventState}
         btnText="See Tickets"
       />
     </div>
