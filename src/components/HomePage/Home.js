@@ -5,7 +5,12 @@ import { Link, useHistory } from "react-router-dom";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import HomeHeader from "../ReusableComponents/HomeHeader/Index";
 import ImageSlider from "./slideshow/ImageSlider";
+<<<<<<< HEAD
 import HomeHeadline from "../../components/HomePage/Headline/index";
+=======
+import SideBar from "../ReusableComponents/SidebarEvents/index";
+import Footer from "../ReusableComponents/Footer";
+>>>>>>> main
 
 import Concerts from "../../api/Concerts";
 import Sports from "../../api/Sports";
@@ -36,11 +41,24 @@ function Home() {
   return (
     <>
       {/* <HomeHeader /> */}
+<<<<<<< HEAD
       <HomeHeadline />
       {/* <ImageSlider /> */}
       {/* <Concerts />
       <Sports />
       <Arts /> */}
+=======
+      {/* <ImageSlider /> */}
+      {/* <SideBar
+        src="https://cdn.pixabay.com/photo/2017/01/08/13/58/cube-1963036__340.jpg"
+        title="Jonas Brothers"
+        description="See the global superstar trio on the Remember This Tour!"
+      /> */}
+      {/* <Concerts />
+      <Sports />
+      <Arts /> */}
+      <Footer/>
+>>>>>>> main
       {/* <div className={classes.test}>
         <h1>YoTixx</h1>
         <h1>Testing the automatic deploy again</h1>
