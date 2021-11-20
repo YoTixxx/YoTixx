@@ -5,9 +5,10 @@
   color: white;
   height: 85vh;
   width: 100%;
-
+  
   @media only screen and (max-width: 1024px) {
     height: 10vh;
+    bottom: 0;
   }
 }
 .footer {
@@ -27,24 +28,83 @@
   &__bottom {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    
+    justify-content: center;
+    align-items: center;
 
+    &__container{
+height: 25px;
+display: flex;
+flex-direction: row;
+
+    }
+    
     &__terms {
+      font-family: SF Pro Display;
+      font-style: normal;
+      font-size: 18px;
+      display: flex;
+      text-align: center;
+      color: white;
+      margin-right: 3px;
       @media only screen and (max-width: 1024px) {
-        display: none;
+        font-size: 12px;
       }
+       @media only screen and (max-width: 768px) {
+        font-size: 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 10px;
+      }
+      
       &__agreement {
-        text-decoration: underline;
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-size: 18px;
+        display: flex;
+        text-align: center;
+        color: white;
+      margin-left: 4px;
+      margin-right: 10px;
+      text-decoration: underline;
+      
+      @media only screen and (max-width: 1024px) {
+        font-size: 12px;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 10px;
+      }
+    }
+    }
+
+    &__rights{
+      font-family: SF Pro Display;
+      font-style: normal;
+      font-size: 18px;
+      display: flex;
+      text-align: center;
+      color: white;
+      margin-right: 3px;
+     
+      @media only screen and (max-width: 1024px) {
+        font-size: 12px;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 8px;
       }
     }
     &__logo {
-      width: 150px;
-      height: 40px;
+      width: 135px;
+      height: 25px;
 
       @media only screen and (max-width: 1024px) {
-        width: 125px;
-        height: 25px;
+        display: none;
+        
       }
     }
 
@@ -52,41 +112,20 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-right: 50px;
-      @media only screen and (max-width: 1024px) {
-        margin-right: 5px;
+     
+
+      &__media{
+        width: 25px;
+        height: 25px;
+        margin-right: 25;
+  
+        @media only screen and (max-width: 1024px) {
+        display: none;
+        }
       }
     }
   }
 }
 
-.footer__end {
-  background-color: rgba(230, 15, 15, 0.694);
-  height: 10vh;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-}
-.footer-social-media {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  margin-right: 30px;
 
-  @media only screen and (max-width: 1024px) {
-    margin-right: 5px;
-    justify-content: flex-end;
-  }
-}
-
-.text{
-    display: flex;
-   flex-direction: row;
-   border: black 1px solid;
-}
-
-.right{
-margin-left: auto;
-  
-}
 

@@ -90,31 +90,31 @@ const Footer = () => {
         <br />
         <div className="footer__bottom">
           <img src={YoTixx} className="footer__bottom__logo" />
+          <div className="footer__bottom__container">
           <p className="footer__bottom__terms">
-          By continuing past this page, you agree to our
-            <span className="footer__bottom__terms__agreement"> Terms of Use</span>
+          By continuing past this page, you agree to our <span className="footer__bottom__terms__agreement">  Terms of Use </span>
           </p>
-          <p>© 2021 YoTixx. All rights reserved.</p>
+          <p className="footer__bottom__rights">© 2021 YoTixx. All rights reserved.</p>
+          </div>
           <div className="footer__bottom__images">
             <img
               src={facebook}
               alt="social media logo"
-              className="footer-social-media"
+              className="footer__bottom__images__media"
             />
             <img
               src={instagram}
               alt="social media logo"
-              className="footer-social-media"
+              className="footer__bottom__images__media"
             />
             <img
               src={twitter}
               alt="social media logo"
-              className="footer-social-media"
+              className="footer__bottom__images__media"
             />
           </div>
         </div>
       </footer>
-      {/* <div className="footer__end"></div> */}
     </section>
   );
 };
