@@ -15,6 +15,8 @@ const HeadlineEvents = ({
       <h2 className="headline-events__title">{title}</h2>
       <div className="headline-events__bottom">
         <p className="headline-events__bottom__description">
+          Grab your tickets now before they sell out!
+          <br />
           {location} - {city}, {state}
         </p>
         <button onClick={onClick} className="headline-events__bottom__button">
