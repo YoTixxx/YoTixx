@@ -1,0 +1,133 @@
+.main {
+  flex-shrink: 0;
+  text-align: center;
+  background-color: #527ca4;
+  color: white;
+  height: auto;
+  width: 100%;
+  padding-bottom: 5%;
+  
+  @media only screen and (max-width: 1024px) {
+    height: 10vh;
+    bottom: 0;
+  }
+}
+.footer {
+  margin: 10px 40px 0 40px;
+  @media only screen and (max-width: 1024px) {
+    margin: 10px 20px 0 20px;
+  }
+
+  &__top {
+    border-bottom: white 1px solid;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &__container{
+height: 25px;
+display: flex;
+flex-direction: row;
+
+    }
+    
+    &__terms {
+      font-family: SF Pro Display;
+      font-style: normal;
+      font-size: 18px;
+      display: flex;
+      text-align: center;
+      color: white;
+      margin-right: 3px;
+      @media only screen and (max-width: 1024px) {
+        font-size: 12px;
+      }
+       @media only screen and (max-width: 768px) {
+        font-size: 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 6px;
+      }
+      
+      &__agreement {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-size: 18px;
+        display: flex;
+        text-align: center;
+        color: white;
+        margin-left: 4px;
+        margin-right: 10px;
+        text-decoration: underline;
+      
+      @media only screen and (max-width: 1024px) {
+        font-size: 12px;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 6px;
+      }
+    }
+    }
+
+    &__rights{
+      font-family: SF Pro Display;
+      font-style: normal;
+      font-size: 18px;
+      display: flex;
+      text-align: center;
+      color: white;
+      margin-right: 15px;
+     
+      @media only screen and (max-width: 1024px) {
+        font-size: 12px;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 6px;
+      }
+    }
+    &__logo {
+      width: 135px;
+      height: 25px;
+      margin-right: 25px;
+
+      @media only screen and (max-width: 1024px) {
+        display: none;
+        
+      }
+    }
+
+    &__images {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     
+
+      &__media{
+        width: 25px;
+        height: 25px;
+        margin-right: 25px;
+  
+        @media only screen and (max-width: 1024px) {
+        display: none;
+        }
+      }
+    }
+  }
+}
+
+
+
